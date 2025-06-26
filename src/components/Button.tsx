@@ -7,7 +7,7 @@ interface IButton {
 
 function Button(props: IButton) {
     return (
-        <button className={`cursor-pointer px-7 py-4 rounded-[10px] bg-gray-700/50 text-white border border-black/10 flex items-center space-x-2 text-[14px] ${props.className}`}>
+        <button className={`cursor-pointer hover:bg-cyan-500 px-7 py-4 rounded-[10px] border border-cyan-400 text-white flex items-center space-x-2 text-[14px] ${props.className}`}>
             <span>{props.name}</span>
             <img src={props.icon} alt="icon" className="w-5 h-5" />
         </button>
