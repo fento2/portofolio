@@ -1,4 +1,6 @@
+import { BsGithub } from "react-icons/bs";
 
+import { SiNextdotjs } from "react-icons/si";
 
 interface IIcon {
     name: string;
@@ -19,7 +21,7 @@ function Icon(props: IIcon) {
                     src={props.icon}
                     alt="icon"
                     className="w-24 h-24 mb-2"
-                />
+                /> 
                 <span className={`font-semibold tracking-widest text-white`}>
                     {props.name}
                 </span>

@@ -9,17 +9,16 @@ import { useState } from "react";
 
 function Navbar() {
 
-
     const [openLangMenu, setOpenLangMenu] = useState(false);
     const [openSideNav, setOpenSideNav] = useState(false);
     const { language, setLanguage } = useContext(LanguageContext);
-
+    
 
 
     return (
 
         <div>
-            <nav className="w-full text-white py-5 md:py-6 fixed top-0 z-50 bg-black/40 border-b border-black rounded-b-4xl">
+            <nav className="w-full text-white py-5 md:py-6 fixed top-0 z-50 bg-black/50 backdrop-blur-xs rounded-b-4xl">
                 <div className="flex items-center justify-between px-6">
 
                     {/* kiri: Icon menu */}
@@ -33,7 +32,7 @@ function Navbar() {
                     
 
                     {/* tengah nama */}
-                    <div className="">
+                    <div>
                         <Link href="#home"><Logo /></Link>
                     </div>
 
@@ -55,19 +54,18 @@ function Navbar() {
                     </ul>
 
 
-                    <div>
-                       
+                    <div>    
                         <button
                             type="button"
-                            className="w-8 h-8 flex items-center justify-center hover:bg-cyan-500 hover:rounded-full transition cursor-pointer"
+                            className="w-8 h-8 flex items-center justify-center transition cursor-pointer"
                             onClick={() => setOpenLangMenu(!openLangMenu)}
                         >
-                            <LucideLanguages />
+                            <LucideLanguages className="hover:text-cyan-500" />
                         </button>
                         
 
                         {openLangMenu && (
-                            <div className="absolute right-0 mt-2 w-28 bg-white text-black rounded-md shadow-lg z-50">
+                            <div className="absolute right-0 mt-2 w-28 bg-gray-900 text-white rounded-md shadow-lg z-50">
                                 <button
                                     className="w-full text-left px-4 py-2 hover:bg-cyan-500 cursor-pointer"
                                     onClick={() => {
@@ -75,7 +73,7 @@ function Navbar() {
                                         setOpenLangMenu(false);
                                     }}
                                 >
-                                    Bahsa Indonesia
+                                    Bahasa Indonesia
                                 </button>
                                 <button
                                     className="w-full text-left px-4 py-2 hover:bg-cyan-500 cursor-pointer"
