@@ -2,7 +2,7 @@
 import Icon from "@/components/Icon";
 import { useContext } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
-
+import FadeIn from "@/components/FadeIn";
 
 function AboutPage() {
     const { language } = useContext(LanguageContext);
@@ -113,78 +113,86 @@ function AboutPage() {
 
 
     return (
-        <div className="text-white mx-7">
-            <div className="space-y-12 lg:grid grid-cols-2 gap-3">
+
+
+        <div className="space-y-8 text-white mx-7 text-center">
+            <FadeIn delay={0.3}>
+            <h1 className={`text-4xl font-bold`}>About</h1>
+            <h1 className="text-[18px] mb-8 mt-2">{language === "en" ? about.en.subtitle : about.id.subtitle}</h1>
+            </FadeIn>
+            <div className="space-y-8 lg:grid grid-cols-2 gap-6">
 
                 <div className="flex flex-col items-center text-center space-y-12">
-                    <h1 className={`text-4xl font-bold`}>About</h1>
-                    <h1 className="text-[18px] -mt-10">{language === "en" ? about.en.subtitle : about.id.subtitle}</h1>
-
-                    <div className="max-w-[500px] lg:max-w-[700px] text-left bg-gray-900 px-5 py-10 rounded-2xl space-y-4  border-none">
-                        <h1 className="text-[18px] font-bold sm:text-xl">{language === "en" ? about.en.title : about.id.title}</h1>
-                        {(language === "en" ? about.en.desc : about.id.desc).map((value, index) => (
-                            <p key={index}
-                                className="md:text-[16px] 
+                    <FadeIn delay={0.3}>
+                        <div className="max-w-[500px] lg:max-w-[700px] text-left bg-neutral-900 px-5 py-10 rounded-2xl space-y-4  border-none">
+                            <h1 className="text-[18px] font-bold sm:text-xl">{language === "en" ? about.en.title : about.id.title}</h1>
+                            {(language === "en" ? about.en.desc : about.id.desc).map((value, index) => (
+                                <p key={index}
+                                    className="md:text-[16px] 
                                 indent-8 text-justify"
-                            >{value}</p>
-                        ))}
+                                >{value}</p>
+                            ))}
 
-                    </div>
-                    
-                    <div className="bg-gray-900 sm:bg-transparent sm:grid grid-cols-2 gap-8 max-w-[500px] w-full lg:max-w-[700px] text-left rounded-2xl ">
-
-                        <div className="text-left border-none px-5 py-10 rounded-2xl sm:bg-gray-900">
-                            <h1 className="text-[18px] font-bold sm:text-xl mb-3">{language === "en" ? fundamental.en.title : fundamental.en.title}</h1>
-                            <p className="md:text-[16px] tracking-wide mb-2">{language === "en" ? fundamental.en.subtitle : fundamental.id.subtitle}</p>
-                            <ul className="list-disc pl-5 space-y-1 text-[16px]">
-                                {(language === "en" ? fundamental.en.isi : fundamental.id.isi).map((value, index) => (
-                                    <li key={index}>{value}</li>
-                                ))}
-                            </ul>
                         </div>
-                        
-                        <div className="text-left border-none px-5 py-10 rounded-2xl sm:bg-gray-900">
-                            <h1 className="text-[18px] font-bold sm:text-xl mb-3">{language === "en" ? skills.en.title : skills.id.title}</h1>
-                            <p className="md:text-[16px] tracking-wide mb-2">{language === "en" ? skills.en.subtitle : skills.id.subtitle}</p>
-                            <ul className="list-disc pl-5 space-y-1 text-[16px]">
-                                {(language === "en" ? skills.en.isi : skills.id.isi).map((value, index) => (
-                                    <li key={index}>{value}</li>
-                                ))}
-                            </ul>
-                        </div>
+                    </FadeIn>
 
-
-                    </div>
                 </div>
 
-                {/* Tech Stack */}
-                <div className="col-span-1 h-[780px]">
-                    <div className="space-y-12">
-                        <div className="flex flex-col justify-center items-center text-center max-w-96 mx-auto">
-                            <h1 className={`text-4xl font-bold`}>{language === "en" ? tech.en.title : tech.id.title}</h1>
-                            <h1 className="text-[18px] mt-[10px]">{language === "en" ? tech.en.subtitle : tech.id.subtitle}</h1>
-                        </div>
+                <div className="flex flex-col items-center">
+                   <FadeIn delay={0.3}>
+                        <div className="bg-neutral-900 sm:grid grid-cols-2 gap-6 max-w-[500px] w-full lg:max-w-[700px] text-left rounded-2xl ">
 
-                        <div className="grid grid-rows-2">
-                            <div className="flex justify-center items-center">
-                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-8">
-                                    <div><Icon icon="/icons8-html.svg" name="HTML" ClassName="hover:shadow-[#e44d26]" /></div>
-                                    <div><Icon icon="/icons8-css.svg" name="CSS" ClassName="hover:shadow-[#264de4]" /></div>
-                                    <div><Icon icon="/icons8-js.svg" name="JavaScript" ClassName="hover:shadow-yellow-400" /></div>
-                                    <div><Icon icon="/icons8-typescript.svg" name="TypeScript" ClassName="hover:shadow-blue-400" /></div>
-                                    <div><Icon icon="/icons8-react.svg" name="React" ClassName="hover:shadow-cyan-400" /></div>
-                                    <div><Icon icon="/icons8-tailwind-css.svg" name="Tailwind CSS" ClassName="hover:shadow-sky-400" /></div>
-                                    <div><Icon icon="/next.svg" name="Next.Js" ClassName="hover:shadow-white" /></div>
-                                    <div><Icon icon="/nodejs.svg" name="Node.Js" ClassName="hover:shadow-[#339933]" /></div>
-                                    <div><Icon icon="/github-logo.png" name="GitHub" ClassName="hover:shadow-white" /></div>
-                                </div>
+                            <div className="text-left border-none px-5 py-10 rounded-2xl ">
+                                <h1 className="text-[18px] font-bold sm:text-xl mb-3">{language === "en" ? fundamental.en.title : fundamental.en.title}</h1>
+                                <p className="md:text-[16px] tracking-wide mb-2">{language === "en" ? fundamental.en.subtitle : fundamental.id.subtitle}</p>
+                                <ul className="list-disc pl-5 space-y-1 text-[16px]">
+                                    {(language === "en" ? fundamental.en.isi : fundamental.id.isi).map((value, index) => (
+                                        <li key={index}>{value}</li>
+                                    ))}
+                                </ul>
                             </div>
 
+                            <div className="text-left border-none px-5 py-10 rounded-2xl">
+                                <h1 className="text-[18px] font-bold sm:text-xl mb-3">{language === "en" ? skills.en.title : skills.id.title}</h1>
+                                <p className="md:text-[16px] tracking-wide mb-2">{language === "en" ? skills.en.subtitle : skills.id.subtitle}</p>
+                                <ul className="list-disc pl-5 space-y-1 text-[16px]">
+                                    {(language === "en" ? skills.en.isi : skills.id.isi).map((value, index) => (
+                                        <li key={index}>{value}</li>
+                                    ))}
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </FadeIn>
+
+                </div>
+            </div>
+            <FadeIn delay={0.3}>
+                <div className="space-y-12">
+                    <div className="flex flex-col justify-center items-center text-center max-w-96 mx-auto">
+                        <h1 className={`text-4xl font-bold`}>{language === "en" ? tech.en.title : tech.id.title}</h1>
+                        <h1 className="text-[18px] mt-[10px]">{language === "en" ? tech.en.subtitle : tech.id.subtitle}</h1>
+                    </div>
+
+                    <div className="grid grid-rows-1">
+                        <div className="flex justify-center items-center">
+                            <div className="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-6 md:gap-8">
+                                <div><Icon icon="/icons8-html.svg" name="HTML" ClassName="hover:shadow-[#e44d26]" /></div>
+                                <div><Icon icon="/icons8-css.svg" name="CSS" ClassName="hover:shadow-[#264de4]" /></div>
+                                <div><Icon icon="/icons8-js.svg" name="JavaScript" ClassName="hover:shadow-yellow-400" /></div>
+                                <div><Icon icon="/icons8-typescript.svg" name="TypeScript" ClassName="hover:shadow-blue-400" /></div>
+                                <div><Icon icon="/icons8-react.svg" name="React" ClassName="hover:shadow-cyan-400" /></div>
+                                <div><Icon icon="/icons8-tailwind-css.svg" name="Tailwind CSS" ClassName="hover:shadow-sky-400" /></div>
+                                <div><Icon icon="/next.svg" name="Next.Js" ClassName="hover:shadow-white" /></div>
+                                <div><Icon icon="/nodejs.svg" name="Node.Js" ClassName="hover:shadow-[#339933]" /></div>
+                                <div><Icon icon="/github-logo.png" name="GitHub" ClassName="hover:shadow-white" /></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </FadeIn>
+        </div >
     );
 }
 

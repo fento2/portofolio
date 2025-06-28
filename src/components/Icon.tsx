@@ -15,7 +15,7 @@ function Icon(props: IIcon) {
             <div className={`cursor-pointer rounded-3xl shadow-2xl 
       w-full h-full flex flex-col justify-center items-center text-center
       transition-all duration-300 transform
-      hover:scale-110 hover:shadow-2xl bg-gray-900 border-none  ${props.ClassName}`}>
+      hover:scale-110 hover:shadow-2xl bg-neutral-900 border-none  ${props.ClassName}`}>
 
                 <img
                     src={props.icon}

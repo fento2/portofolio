@@ -7,7 +7,7 @@ import {
 import { Car, Languages } from "lucide-react";
 import { useContext } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
-
+import FadeIn from "@/components/FadeIn";
 
 function ProjectsPage() {
 
@@ -45,63 +45,68 @@ function ProjectsPage() {
 
   return (
     <section className="w-full px-4 md:px-20">
-      <h1 className="text-4xl font-bold mb-12 text-center">
-        Projects
-      </h1>
-      <p className="text-[18px] text-center -mt-10 mb-12">{language === "en" ? "What I've been working on recently" : "Apa yang sedang saya kerjakan belakangan ini"}</p>
-
+      <FadeIn>
+        <h1 className="text-4xl font-bold mb-12 text-center">
+          Projects
+        </h1>
+        <p className="text-[18px] text-center -mt-10 mb-12">{language === "en" ? "What I've been working on recently" : "Apa yang sedang saya kerjakan belakangan ini"}</p>
+      </FadeIn>
       <div className="w-full max-w-7xl mx-auto grid gap-8 grid-cols-1 lg:grid-cols-2">
         {projects.map((project, index) => {
           const isHorizontal = index === 2;
 
           return (
+
             <Card
               key={index}
-              className={`bg-gray-900 border-none text-white 
+              className={`bg-neutral-900 border-none text-white 
                 ${isHorizontal ? "lg:col-span-2" : ""}
                 `}
             >
-              <CardContent
-                className={`p-4 ${isHorizontal ? "flex flex-col lg:flex-row gap-4 items-start " : ""
-                  }`}
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className={`rounded-2xl transition-transform duration-300 
+              <FadeIn>
+                <CardContent
+                  className={`p-4 ${isHorizontal ? "flex flex-col lg:flex-row gap-4 items-start " : ""
+                    }`}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className={`rounded-2xl transition-transform duration-300 
                     ease-in-out hover:scale-105
                     ${isHorizontal
-                      ? "w-full lg:w-1/3 "
-                      : "w-full"
-                    }`}
-                />
-                <div
-                  className={`${isHorizontal ? "w-full lg:w-full" : "w-full"
-                    } px-2`}
-                >
-                  <CardTitle className="text-xl font-semibold mb-2">
-                    {project.title}
-                  </CardTitle>
-                  <CardDescription className=" leading-relaxed text-white text-[16px]">
-                    <p className="indent-8 text-justify">{language === "en" ? project.description.en : project.description.id}</p>
+                        ? "w-full lg:w-1/3 "
+                        : "w-full"
+                      }`}
+                  />
+                  <div
+                    className={`${isHorizontal ? "w-full lg:w-full" : "w-full"
+                      } px-2`}
+                  >
+                    <CardTitle className="text-xl font-semibold mb-2">
+                      {project.title}
+                    </CardTitle>
+                    <CardDescription className=" leading-relaxed text-white text-[16px]">
+                      <p className="indent-8 text-justify">{language === "en" ? project.description.en : project.description.id}</p>
 
-                    {project.tech && (
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {project.tech.map((tech, i) => (
-                          <span
-                            key={i}
-                            className="px-3 py-1 text-sm bg-gray-900/50 text-cyan-500 rounded-full border border-cyan-500"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </CardDescription>
+                      {project.tech && (
+                        <div className="flex flex-wrap gap-2 mt-4">
+                          {project.tech.map((tech, i) => (
+                            <span
+                              key={i}
+                              className="px-3 py-1 text-sm bg-gray-900/50 text-cyan-500 rounded-full border border-cyan-500"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </CardDescription>
 
-                </div>
-              </CardContent>
+                  </div>
+                </CardContent>
+              </FadeIn>
             </Card>
+
           );
         })}
       </div>
