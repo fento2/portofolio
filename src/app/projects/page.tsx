@@ -4,7 +4,6 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
-import { Car, Languages } from "lucide-react";
 import { useContext } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
 import FadeIn from "@/components/FadeIn";

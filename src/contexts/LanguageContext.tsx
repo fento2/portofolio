@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useState, ReactNode } from "react";
+import { useEffect } from "react";
 
 interface ILanguageContext {
   language: string;
@@ -17,7 +18,20 @@ interface ILanguageProvider {
 }
 
 function LanguageProvider(props: ILanguageProvider) {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguageState] = useState("en");
+
+  //ambil di local storage
+  useEffect(()=>{
+    const savedLang = localStorage.getItem("language");
+    if(savedLang){
+      setLanguage(savedLang);
+    }
+  }, []); //cuman ambil sekali
+
+  const setLanguage = (lang: string) => {
+    setLanguageState(lang);
+    localStorage.setItem("language", lang);
+  }
 
   return (
     <LanguageContext value={{ language, setLanguage }}>

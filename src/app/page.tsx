@@ -10,6 +10,8 @@ import { BsInstagram } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link"
 import { FadeInLeft } from "@/components/FadeIn";
+import Experience from "./experience/page";
+
 
 export default function Home() {
   const { language, setLanguage } = useContext(LanguageContext);
@@ -72,6 +74,14 @@ export default function Home() {
           <AboutPage />
         </section>
 
+         {/* Experience */}         
+        <section
+          id="experience"
+          className="w-full py-20 md:pt-24 text-white bg-black/30"
+        >
+          <Experience />
+        </section>
+
 
         {/* Projects */}
         <section
@@ -85,7 +95,9 @@ export default function Home() {
         <section id="contact" className="w-full py-4 text-white">
           <ContactPage />
         </section>
+
       </div>
+
       <footer className="text-white py-4 border-t border-white">
         <p className="text-sm text-center tracking-wide">
           © {new Date().getFullYear()} Fendry Tonrate - All rights reserved.

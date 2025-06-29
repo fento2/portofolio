@@ -15,7 +15,7 @@ function Navbar() {
     const [openLangMenu, setOpenLangMenu] = useState(false);
     const [openSideNav, setOpenSideNav] = useState(false);
     const { language, setLanguage } = useContext(LanguageContext);
-
+    
 
 
     return (
@@ -24,7 +24,7 @@ function Navbar() {
             <nav className="w-full text-white py-3 md:py-6 fixed top-0 z-50 bg-black/30 backdrop-blur-xs rounded-b-4xl">
                 <div className="flex items-center justify-between px-6">
 
-                    {/* kiri: Icon menu */}
+
                     {!openSideNav && (<button className="w-6 h-6 md:hidden lg:hidden xl:hidden"
                         onClick={() => { setOpenSideNav(true) }}>
                         <img src="/menu.svg" alt="menu" />
@@ -34,16 +34,17 @@ function Navbar() {
                     </div>)}
 
 
-                    {/* tengah nama */}
+
                     <div>
                         <Link href="#home"><Logo /></Link>
                     </div>
 
-                    {/* navigasi tengah */}
+
                     <ul className="hidden md:flex lg:flex space-x-5 text-[18px] font-medium tracking-widest ">
                         {[
                             { href: "#home", label: "Home" },
                             { href: "#about", label: "About" },
+                            { href: "#experience", label: "Experience" },
                             { href: "#projects", label: "Projects" },
                             { href: "#contact", label: "Contact" }
                         ].map(({ href, label }) => (
@@ -102,7 +103,7 @@ function Navbar() {
             <AnimatePresence>
                 {openSideNav && (
                     <>
-                        {/* BACKDROP */}
+
                         <motion.div
                             key="backdrop"
                             className="fixed inset-0 bg-black/30 z-50 backdrop-blur-xs"
@@ -113,7 +114,7 @@ function Navbar() {
                             onClick={() => setOpenSideNav(false)}
                         />
 
-                        {/* SIDE NAVBAR */}
+
                         <motion.aside
                             key="sidenav"
                             initial={{ x: "-100%" }}
@@ -123,7 +124,7 @@ function Navbar() {
                             className="fixed top-0 left-0 h-full w-1/2 bg-black/30 z-50 text-white 
                             flex flex-col items-center justify-center rounded-r-4xl"
                         >
-                            {/* Tombol Close */}
+
                             <button
                                 className="w-6 h-6 absolute top-4 right-4"
                                 onClick={() => setOpenSideNav(false)}
@@ -135,6 +136,7 @@ function Navbar() {
                                 {[
                                     { href: "#home", label: "Home" },
                                     { href: "#about", label: "About" },
+                                    { href: "#experience", label: "Experience" },
                                     { href: "#projects", label: "Projects" },
                                     { href: "#contact", label: "Contact" },
                                 ].map(({ href, label }) => (
