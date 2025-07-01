@@ -39,11 +39,6 @@
     --sidebar-ring: oklch(0.708 0 0);
 }
 
-body {
-    font-family: monospace;
-   
-
-}
 
 
 
@@ -146,7 +141,7 @@ body {
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
   background-repeat: repeat;
-  animation: scroll-grid 1.5s linear infinite;
+  animation: scroll-grid 3s linear infinite;
   will-change: background-position;
 }
 

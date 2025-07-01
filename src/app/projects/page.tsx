@@ -1,16 +1,26 @@
+"use client"
+
 import {
   Card,
   CardContent,
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
-import FadeIn from "@/components/FadeIn";
+import FadeIn from "@/components/core/FadeIn";
+import { useRouter } from "next/navigation";
 
 function ProjectsPage() {
 
-  const { language } = useContext(LanguageContext);
+   const router = useRouter();
+  
+      const { language } = useContext(LanguageContext);
+  
+      useEffect(()=>{
+              router.replace("/");
+              
+          }, []);
 
   const projects = [
     {
@@ -43,13 +53,13 @@ function ProjectsPage() {
   ];
 
   return (
-    <section className="w-full px-4 md:px-20">
-      <FadeIn>
+    <section className="py-8 w-full px-4 md:px-20">
+   
         <h1 className="text-4xl font-bold mb-12 text-center">
           Projects
         </h1>
         <p className="text-[18px] text-center -mt-10 mb-12">{language === "en" ? "What I've been working on recently" : "Apa yang sedang saya kerjakan belakangan ini"}</p>
-      </FadeIn>
+ 
       <div className="w-full max-w-7xl mx-auto grid gap-8 grid-cols-1 lg:grid-cols-2">
         {projects.map((project, index) => {
           const isHorizontal = index === 2;

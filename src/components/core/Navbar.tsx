@@ -15,13 +15,21 @@ function Navbar() {
     const [openLangMenu, setOpenLangMenu] = useState(false);
     const [openSideNav, setOpenSideNav] = useState(false);
     const { language, setLanguage } = useContext(LanguageContext);
-    
+
+    const MenuNav = [
+        { href: "#home", label: "Home" },
+        { href: "#about", label: "About" },
+        { href: "#experience", label: "Experience" },
+        { href: "#projects", label: "Projects" },
+        { href: "#contact", label: "Contact" },
+    ];
+
 
 
     return (
 
         <div>
-            <nav className="w-full text-white py-3 md:py-6 fixed top-0 z-50 bg-black/30 backdrop-blur-xs rounded-b-4xl">
+            <nav className="w-full text-white py-3 md:py-6 fixed top-0 z-50 bg-black/50 backdrop-blur-xs">
                 <div className="flex items-center justify-between px-6">
 
 
@@ -36,18 +44,12 @@ function Navbar() {
 
 
                     <div>
-                        <Link href="#home"><Logo /></Link>
+                        <Link href="/"><Logo /></Link>
                     </div>
 
 
                     <ul className="hidden md:flex lg:flex space-x-5 text-[18px] font-medium tracking-widest ">
-                        {[
-                            { href: "#home", label: "Home" },
-                            { href: "#about", label: "About" },
-                            { href: "#experience", label: "Experience" },
-                            { href: "#projects", label: "Projects" },
-                            { href: "#contact", label: "Contact" }
-                        ].map(({ href, label }) => (
+                        {MenuNav.map(({ href, label }) => (
                             <li key={label} className="relative group cursor-pointer">
                                 <Link href={href} className={`text-white`}>
                                     {label}
@@ -69,7 +71,7 @@ function Navbar() {
 
 
                         {openLangMenu && (
-                            <div className="absolute right-0 mt-2 w-28 bg-black/30 text-white rounded-md shadow-lg z-50">
+                            <div className="absolute right-0 mt-2 w-28 bg-black/50 text-white rounded-md shadow-lg z-50">
                                 <button
                                     className="w-full text-left px-4 py-2 hover:bg-cyan-500 cursor-pointer"
                                     onClick={() => {
@@ -100,7 +102,7 @@ function Navbar() {
 
 
 
-            <AnimatePresence>
+            <AnimatePresence mode="wait">
                 {openSideNav && (
                     <>
 
@@ -121,8 +123,8 @@ function Navbar() {
                             animate={{ x: 0 }}
                             exit={{ x: "-100%" }}
                             transition={{ type: "tween", duration: 0.4 }}
-                            className="fixed top-0 left-0 h-full w-1/2 bg-black/30 z-50 text-white 
-                            flex flex-col items-center justify-center rounded-r-4xl"
+                            className="fixed top-0 left-0 h-full w-3/5 bg-black/50 z-50 text-white 
+                            flex flex-col items-center justify-center"
                         >
 
                             <button
@@ -133,13 +135,7 @@ function Navbar() {
                             </button>
 
                             <ul className="flex flex-col items-center space-y-7 text-sm font-medium tracking-widest">
-                                {[
-                                    { href: "#home", label: "Home" },
-                                    { href: "#about", label: "About" },
-                                    { href: "#experience", label: "Experience" },
-                                    { href: "#projects", label: "Projects" },
-                                    { href: "#contact", label: "Contact" },
-                                ].map(({ href, label }) => (
+                                {MenuNav.map(({ href, label }) => (
                                     <li key={label} className="relative group cursor-pointer">
                                         <Link href={href} onClick={() => setOpenSideNav(false)}>
                                             <span className="text-white">{label}</span>

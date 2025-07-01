@@ -1,11 +1,14 @@
 "use client";
-import Icon from "@/components/Icon";
-import { useContext } from "react";
+import Icon from "@/components/core/Icon";
+import { useContext, useEffect } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
-import FadeIn from "@/components/FadeIn";
+import FadeIn from "@/components/core/FadeIn";
+import { useRouter } from "next/navigation";
 
 function AboutPage() {
     const { language } = useContext(LanguageContext);
+    
+    const router = useRouter();
 
 
     const about = {
@@ -109,6 +112,11 @@ function AboutPage() {
         },
     };
 
+    useEffect(()=>{
+        router.replace("/");
+        
+    }, []);
+
 
 
 
@@ -116,19 +124,19 @@ function AboutPage() {
 
 
 
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-20 space-y-8 text-white text-center">
-            <FadeIn delay={0.3}>
+        <div className="w-full py-8 max-w-7xl mx-auto px-4 md:px-20 space-y-8 text-white text-center">
+            <div>
                 <h1 className="text-4xl font-bold">About</h1>
                 <h1 className="text-[18px] mb-8 mt-2">
                     {language === "en" ? about.en.subtitle : about.id.subtitle}
                 </h1>
-            </FadeIn>
+            </div>
 
 
             <div className="space-y-8 lg:grid grid-cols-2 gap-6">
 
                 <div className="flex flex-col items-center text-center space-y-12">
-                    <FadeIn delay={0.3}>
+                    <FadeIn>
                         <div className="w-full bg-neutral-900 px-5 py-10 rounded-2xl space-y-4 border-none text-left">
                             <h1 className="text-[18px] font-bold sm:text-xl">
                                 {language === "en" ? about.en.title : about.id.title}
@@ -144,7 +152,7 @@ function AboutPage() {
                 </div>
 
                 <div className="flex flex-col items-center">
-                    <FadeIn delay={0.3}>
+                    <FadeIn>
                         <div className="w-full bg-neutral-900 sm:grid grid-cols-2 gap-6 rounded-2xl">
 
                             <div className="text-left px-5 py-10">
@@ -180,9 +188,9 @@ function AboutPage() {
                 </div>
             </div>
 
-            <FadeIn delay={0.3}>
+            <FadeIn>
                 <div className="max-w-3xl mx-auto bg-neutral-900 px-6 py-8 rounded-2xl text-white text-center space-y-3">
-                    <p className="text-lg italic">
+                    <p className="text-[18px] italic">
                         {language === "en"
                             ? `"Every great developer you know got there by solving problems they were unqualified to solve - until they actually did it."`
                             : `"Setiap developer hebat yang kamu kenal dulunya pernah mengerjakan hal yang belum tentu bisa - sampai akhirnya mereka bisa."`}
@@ -192,10 +200,10 @@ function AboutPage() {
             </FadeIn>
 
 
-            <FadeIn delay={0.3}>
+            <FadeIn>
                 <div className="space-y-12">
                     <div className="flex flex-col justify-center items-center text-center max-w-96 mx-auto">
-                        <h1 className="text-4xl font-bold">
+                        <h1 className="text-3xl font-bold">
                             {language === "en" ? tech.en.title : tech.id.title}
                         </h1>
                         <h1 className="text-[18px] mt-[10px]">

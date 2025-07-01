@@ -1,8 +1,8 @@
 "use client";
 
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
-import FadeIn from "@/components/FadeIn";
+import FadeIn from "@/components/core/FadeIn";
 import {
   Card,
   CardContent,
@@ -10,9 +10,18 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
+import { useRouter } from "next/navigation";
 
 function ExperiencePage() {
-  const { language } = useContext(LanguageContext);
+
+  const router = useRouter();
+ 
+     const { language } = useContext(LanguageContext);
+ 
+     useEffect(()=>{
+             router.replace("/");
+             
+         }, []);
 
     const experiences = [
     {
@@ -27,8 +36,8 @@ function ExperiencePage() {
   ];
 
   return (
-    <section className="w-full px-4 md:px-20" id="experience">
-      <FadeIn>
+    <section className="py-8 w-full px-4 md:px-20" id="experience">
+      
         <h1 className="text-4xl font-bold mb-12 text-center text-white">
           {language === "en" ? "Experience" : "Pengalaman"}
         </h1>
@@ -37,7 +46,7 @@ function ExperiencePage() {
             ? "What I've done professionally"
             : "Apa saja pengalaman profesional saya"}
         </p>
-      </FadeIn>
+      
 
       <div className="w-full max-w-7xl mx-auto grid gap-8 grid-cols-1 lg:grid-cols-2">
         {experiences.map((exp, index) => {

@@ -1,16 +1,27 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
 import { warna1 } from "../page";
-import { FadeInLeft } from "@/components/FadeIn";
+import { FadeInLeft } from "@/components/core/FadeIn";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 function ContactPage() {
+
+    const router = useRouter();
 
     const { language } = useContext(LanguageContext);
 
+    useEffect(()=>{
+            router.replace("/");
+            
+        }, []);
+
     return (
-        <div className="w-full py-20  text-white">
+        <div className="w-full py-8  text-white">
             <h1 className={`text-4xl font-bold text-center mb-10`}>Contact</h1>
 
             <div className="max-w-xl mx-auto px-4">
@@ -81,9 +92,9 @@ function ContactPage() {
                                 <div>
                                     <div className="flex flex-row gap-x-12
                                     bg-transparent border-none text-white">
-                                        <a href="https://github.com/fento2" target="_blank" rel="noopener noreferrer"><FaGithub className="w-12 h-12 hover:text-cyan-500 cursor-pointer" /></a>
-                                        <a href="https://www.linkedin.com/in/fendry-tonrate-0a46b9348/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn className="w-12 h-12 hover:text-cyan-500 cursor-pointer" /></a>
-                                        <a href="https://www.instagram.com/fendrytonrate/" target="_blank" rel="noopener noreferrer"><BsInstagram className="w-12 h-12 hover:text-cyan-500 cursor-pointer" /></a>
+                                        <Link href="https://github.com/fento2" target="_blank" rel="noopener noreferrer"><FaGithub className="w-12 h-12 hover:text-cyan-500 cursor-pointer" /></Link>
+                                        <Link href="https://www.linkedin.com/in/fendry-tonrate-0a46b9348/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn className="w-12 h-12 hover:text-cyan-500 cursor-pointer" /></Link>
+                                        <Link href="https://www.instagram.com/fendrytonrate/" target="_blank" rel="noopener noreferrer"><BsInstagram className="w-12 h-12 hover:text-cyan-500 cursor-pointer" /></Link>
 
                                     </div>
                                 </div>

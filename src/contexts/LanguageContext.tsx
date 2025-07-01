@@ -10,7 +10,7 @@ interface ILanguageContext {
 
 export const LanguageContext = createContext<ILanguageContext>({
   language: "en",
-  setLanguage: () => {},
+  setLanguage: () => { },
 });
 
 interface ILanguageProvider {
@@ -21,9 +21,9 @@ function LanguageProvider(props: ILanguageProvider) {
   const [language, setLanguageState] = useState("en");
 
   //ambil di local storage
-  useEffect(()=>{
+  useEffect(() => {
     const savedLang = localStorage.getItem("language");
-    if(savedLang){
+    if (savedLang) {
       setLanguage(savedLang);
     }
   }, []); //cuman ambil sekali
