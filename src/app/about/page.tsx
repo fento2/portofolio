@@ -1,14 +1,14 @@
 "use client";
-import Icon from "@/components/core/Icon";
 import { useContext, useEffect } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
 import FadeIn from "@/components/core/FadeIn";
 import { useRouter } from "next/navigation";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 function AboutPage() {
-    
+
     const { language } = useContext(LanguageContext);
-    
+
     const router = useRouter();
 
 
@@ -112,9 +112,21 @@ function AboutPage() {
         },
     };
 
-    useEffect(()=>{
+    const techStack = [
+        { name: "HTML", icon: "logos:html-5", color: "#e44d26" },
+        { name: "CSS", icon: "logos:css-3", color: "#264de4" },
+        { name: "JavaScript", icon: "logos:javascript", color: "#f7df1e" },
+        { name: "TypeScript", icon: "logos:typescript-icon", color: "#3178c6" },
+        { name: "React", icon: "logos:react", color: "#61dafb" },
+        { name: "Tailwind", icon: "logos:tailwindcss-icon", color: "#38bdf8" },
+        { name: "Next.js", icon: "logos:nextjs-icon", color: "#ffffff" },
+        { name: "Node.js", icon: "logos:nodejs-icon", color: "#339933" },
+        { name: "GitHub", icon: "skill-icons:github-dark", color: "#ffffff" },
+    ];
+
+    useEffect(() => {
         router.replace("/");
-        
+
     }, []);
 
 
@@ -209,19 +221,24 @@ function AboutPage() {
                         </h1>
                     </div>
 
-                    <div className="grid grid-rows-1">
+                    <div className="grid grid-rows-1 mx-7">
                         <div className="flex justify-center items-center">
-                            <div className="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-6 md:gap-8">
-                                {/* Icons */}
-                                <Icon icon="/icons8-html.svg" name="HTML" ClassName="hover:shadow-[#e44d26]" />
-                                <Icon icon="/icons8-css.svg" name="CSS" ClassName="hover:shadow-[#264de4]" />
-                                <Icon icon="/icons8-js.svg" name="JavaScript" ClassName="hover:shadow-yellow-400" />
-                                <Icon icon="/icons8-typescript.svg" name="TypeScript" ClassName="hover:shadow-blue-400" />
-                                <Icon icon="/icons8-react.svg" name="React" ClassName="hover:shadow-cyan-400" />
-                                <Icon icon="/icons8-tailwind-css.svg" name="Tailwind CSS" ClassName="hover:shadow-sky-400" />
-                                <Icon icon="/next.svg" name="Next.Js" ClassName="hover:shadow-white" />
-                                <Icon icon="/nodejs.svg" name="Node.Js" ClassName="hover:shadow-[#339933]" />
-                                <Icon icon="/github-logo.png" name="GitHub" ClassName="hover:shadow-white" />
+                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-12 place-items-center mt-10">
+                                {techStack.map((tech,index) => (
+                                    <div
+                                        key={index}
+                                        className="flex flex-col items-center transition-transform 
+                                        duration-300 hover:scale-110 group"
+                                    >
+                                        <Icon
+                                            icon={tech.icon}
+                                            width={100}
+                                            height={100}
+                                            className="mb-2 group-hover:drop-shadow-[0_0_6px]"
+                                            style={{ color: tech.color }}
+                                        />   
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>

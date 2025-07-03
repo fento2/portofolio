@@ -28,7 +28,7 @@ function ContactPage() {
                     <Card className="bg-black/30 p-6 border-none">
                         <FadeInLeft delay={0.6}>
                             <Card className="bg-neutral-700/30 p-6 border-none">
-                                <h1 className="text-3xl text-[#0fffc1] drop-shadow-[0_0_10px_#0fffc1]">
+                                <h1 className="text-3xl text-cyan-300 drop-shadow-md">
                                     {language === "en" ? "Get In Touch" : "Hubungi Saya"}</h1>
                                 <p className=" text-white text-lg">{language === "en" ?
                                     "Have something to discuss? Send me a message and let's talk" :
@@ -87,7 +87,7 @@ function ContactPage() {
 
                         <FadeInLeft delay={0.6}>
                             <Card className="bg-neutral-700/30 p-6 border-none">
-                                <p className="text-[#0fffc1] drop-shadow-[0_0_10px_#0fffc1] text-2xl">Connect With Me</p>
+                                <p className="text-cyan-300 drop-shadow-md text-2xl">Connect With Me</p>
                                 <div>
                                     <div className="flex flex-row gap-x-12
                                     bg-transparent border-none text-white">
