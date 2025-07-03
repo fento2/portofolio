@@ -22,7 +22,7 @@ export default function Home() {
     scroll-smooth font-sans">
 
       <div className="fixed inset-0 z-0 pointer-events-none">
-        
+        <CyberBackground />
       </div>
 
       {/* Semua konten utama dengan z-index tinggi */}
