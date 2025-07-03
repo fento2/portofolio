@@ -26,7 +26,7 @@ function LanguageProvider(props: ILanguageProvider) {
     if (savedLang) {
       setLanguage(savedLang);
     }
-  }, []); //cuman ambil sekali
+  });
 
   const setLanguage = (lang: string) => {
     setLanguageState(lang);

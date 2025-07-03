@@ -1,6 +1,3 @@
-import { BsGithub } from "react-icons/bs";
-
-import { SiNextdotjs } from "react-icons/si";
 
 interface IIcon {
     name: string;

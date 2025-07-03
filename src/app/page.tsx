@@ -18,7 +18,7 @@ export default function Home() {
 
 
   return (
-    <div className="bg-[#0A0A0A] min-h-screen relative overflow-x-hidden 
+    <div className="bg-[#090527] min-h-screen relative overflow-x-hidden 
     scroll-smooth font-sans">
 
       <div className="fixed inset-0 z-0 pointer-events-none">
@@ -36,7 +36,7 @@ export default function Home() {
           <div className="space-y-8 max-w-3xl font-mono">
 
             <FadeInLeft delay={0.3}>
-              <h1 className={`text-5xl tracking-widest font-bold ${warna1}`}>
+              <h1 className="text-5xl tracking-widest font-bold text-[#0fffc1] drop-shadow-[0_0_10px_#0fffc1]">
                 {language === "en" ? "Hi! I'm Fendry Tonrate" : "Hai! Saya Fendry Tonrate"}
               </h1>
             </FadeInLeft>
@@ -70,7 +70,7 @@ export default function Home() {
 
         <section
           id="about"
-          className="w-full text-white bg-black/50 scroll-mt-18"
+          className="w-full text-white bg-black/50 scroll-mt-12 md:scroll-mt-18"
         >
           <AboutPage />
         </section>
@@ -78,7 +78,7 @@ export default function Home() {
         {/* Experience */}
         <section
           id="experience"
-          className="w-full text-white bg-black/50 scroll-mt-18"
+          className="w-full text-white bg-black/50 scroll-mt-12 md:scroll-mt-18"
         >
           <Experience />
         </section>
@@ -87,13 +87,13 @@ export default function Home() {
         {/* Projects */}
         <section
           id="projects"
-          className="w-full text-white bg-black/50 scroll-mt-18"
+          className="w-full text-white bg-black/50 scroll-mt-12 md:scroll-mt-18"
         >
           <ProjectsPage />
         </section>
 
         {/* Contact */}
-        <section id="contact" className="w-full text-white scroll-mt-18">
+        <section id="contact" className="w-full text-white scroll-mt-12 md:scroll-mt-18">
           <ContactPage />
         </section>
       </div>
@@ -101,4 +101,4 @@ export default function Home() {
   );
 }
 
-export const warna1: string = "text-[#0fffc1] drop-shadow-[0_0_10px_#0fffc1]";
+

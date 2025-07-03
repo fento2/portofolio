@@ -6,6 +6,7 @@ import FadeIn from "@/components/core/FadeIn";
 import { useRouter } from "next/navigation";
 
 function AboutPage() {
+    
     const { language } = useContext(LanguageContext);
     
     const router = useRouter();
@@ -100,7 +101,6 @@ function AboutPage() {
         },
     };
 
-
     const tech = {
         id: {
             title: "Teknologi Utama",
@@ -116,8 +116,6 @@ function AboutPage() {
         router.replace("/");
         
     }, []);
-
-
 
 
     return (

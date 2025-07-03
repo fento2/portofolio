@@ -6,7 +6,6 @@ import FadeIn from "@/components/core/FadeIn";
 import {
   Card,
   CardContent,
-  CardHeader,
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";

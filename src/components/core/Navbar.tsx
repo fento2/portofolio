@@ -71,26 +71,32 @@ function Navbar() {
 
 
                         {openLangMenu && (
-                            <div className="absolute right-0 mt-2 w-28 bg-black/50 text-white rounded-md shadow-lg z-50">
-                                <button
-                                    className="w-full text-left px-4 py-2 hover:bg-cyan-500 cursor-pointer"
-                                    onClick={() => {
-                                        setLanguage("id");
-                                        setOpenLangMenu(false);
-                                    }}
-                                >
-                                    Bahasa Indonesia
-                                </button>
-                                <button
-                                    className="w-full text-left px-4 py-2 hover:bg-cyan-500 cursor-pointer"
-                                    onClick={() => {
-                                        setLanguage("en");
-                                        setOpenLangMenu(false);
-                                    }}
-                                >
-                                    English
-                                </button>
-                            </div>
+                            <>
+                                <div className="fixed inset-0 z-50 min-h-screen w-full bg-transparent"
+                                    onClick={() => setOpenLangMenu(false)} />
+                                    
+                                <div className="absolute right-0 mt-2 w-28 bg-neutral-900 text-white rounded-md z-50">
+                                    <button
+                                        className="w-full text-left px-4 py-2 hover:bg-cyan-500 cursor-pointer"
+                                        onClick={() => {
+                                            setLanguage("id");
+                                            setOpenLangMenu(false);
+                                        }}
+                                    >
+                                        Bahasa Indonesia
+                                    </button>
+                                    <button
+                                        className="w-full text-left px-4 py-2 hover:bg-cyan-500 cursor-pointer"
+                                        onClick={() => {
+                                            setLanguage("en");
+                                            setOpenLangMenu(false);
+                                        }}
+                                    >
+                                        English
+                                    </button>
+                                </div>
+
+                            </>
                         )}
                     </div>
 
@@ -102,7 +108,7 @@ function Navbar() {
 
 
 
-            <AnimatePresence mode="wait">
+            <AnimatePresence>
                 {openSideNav && (
                     <>
 

@@ -141,7 +141,7 @@
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
   background-repeat: repeat;
-  animation: scroll-grid 3s linear infinite;
+  animation: scroll-grid 2s linear infinite;
   will-change: background-position;
 }
 
