@@ -133,7 +133,7 @@ function ProjectsPage() {
         bg-transparent border border-cyan-500
         text-xs"
           onClick={() => setShow( show === 2 ? projects.length : 2)}>
-        {show === 2 ? "See More" : "See Les"}</Button>
+        {show === 2 ? "See More" : "See Less"}</Button>
     </div>        
     </section >
   );
