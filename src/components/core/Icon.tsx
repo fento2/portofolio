@@ -17,6 +17,8 @@ function Icon(props: IIcon) {
 
                 <Image
                     src={props.icon}
+                    width={100}
+                    height={100}
                     alt="icon"
                     className="w-24 h-24 mb-2"
                 /> 

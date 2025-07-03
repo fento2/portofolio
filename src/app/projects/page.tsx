@@ -81,10 +81,12 @@ function ProjectsPage() {
                   <Image
                     src={project.image}
                     alt={project.title}
+                    width={100}
+                    height={100}
                     className={`rounded-2xl transition-transform duration-300 
                     ease-in-out hover:scale-105
                     ${isHorizontal
-                        ? "w-full lg:w-1/3 "
+                        ? "w-full lg:w-1/3"
                         : "w-full"
                       }`}
                   />
