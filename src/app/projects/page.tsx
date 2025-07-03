@@ -10,6 +10,7 @@ import { useContext, useEffect } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
 import FadeIn from "@/components/core/FadeIn";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 function ProjectsPage() {
 
@@ -77,7 +78,7 @@ function ProjectsPage() {
                   className={`p-4 ${isHorizontal ? "flex flex-col lg:flex-row gap-4 items-start " : ""
                     }`}
                 >
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
                     className={`rounded-2xl transition-transform duration-300 

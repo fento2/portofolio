@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 interface IIcon {
     name: string;
@@ -14,7 +15,7 @@ function Icon(props: IIcon) {
       transition-all duration-300 transform
       hover:scale-110 hover:shadow-2xl bg-neutral-900 border-none  ${props.ClassName}`}>
 
-                <img
+                <Image
                     src={props.icon}
                     alt="icon"
                     className="w-24 h-24 mb-2"
