@@ -8,18 +8,19 @@ import CyberBackground from "@/components/core/CyberBackground";
 import { BsInstagram } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link"
-import { FadeInLeft } from "@/components/core/FadeIn";
+import FadeIn, { FadeInLeft, SectionDivider } from "@/components/core/FadeIn";
 import { ExternalLink } from "lucide-react";
 import { MailIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ExperiencePage from "./experience/page";
+import Footer from "@/components/core/Footer";
 
 
 export default function Home() {
   const { language } = useContext(LanguageContext);
 
   return (
-    <div className="bg-[#090527] min-h-screen relative overflow-x-hidden scroll-smooth font-sans">
+    <div className="bg-[#090527] min-h-screen relative overflow-x-hidden scroll-smooth font-mono ">
       <div className="fixed inset-0 z-0 pointer-events-none">
         <CyberBackground />
       </div>
@@ -47,13 +48,13 @@ export default function Home() {
               <div className="mb-16">
                 <div className="flex flex-row gap-x-10 text-white">
                   <Link href="https://github.com/fento2" target="_blank" rel="noopener noreferrer">
-                    <FaGithub className="w-10 h-10 hover:text-cyan-500" />
+                    <FaGithub className="w-12 h-12 hover:text-cyan-500" />
                   </Link>
                   <Link href="https://www.linkedin.com/in/fendry-tonrate-0a46b9348/" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedinIn className="w-10 h-10 hover:text-cyan-500" />
+                    <FaLinkedinIn className="w-12 h-12 hover:text-cyan-500" />
                   </Link>
                   <Link href="https://www.instagram.com/fendrytonrate/" target="_blank" rel="noopener noreferrer">
-                    <BsInstagram className="w-10 h-10 hover:text-cyan-500" />
+                    <BsInstagram className="w-12 h-12 hover:text-cyan-500" />
                   </Link>
                 </div>
               </div>
@@ -61,9 +62,9 @@ export default function Home() {
 
             <FadeInLeft delay={1.3} >
               <div className="flex justify-center space-x-8">
-                <Link href="#projects"><Button className="bg-transparent border border-cyan-500 hover:bg-cyan-500 h-12 w-full cursor-pointer"
+                <Link href="#projects"><Button variant="ghost" className=" border border-cyan-500 hover:bg-cyan-500 h-12 w-full cursor-pointer"
                 >Projects<ExternalLink/></Button></Link>
-                <Link href="#contact"><Button className="bg-transparent border border-cyan-500 hover:bg-cyan-500 h-12 w-full cursor-pointer"
+                <Link href="#contact"><Button variant="ghost" className=" border border-cyan-500 hover:bg-cyan-500 h-12 w-full cursor-pointer"
                 >Contact<MailIcon/></Button></Link>
               </div>
             </FadeInLeft>
@@ -71,19 +72,36 @@ export default function Home() {
         </section>
 
         {/* Sections */}
-        <section id="about" className="w-full text-white bg-black/50 scroll-mt-12 md:scroll-mt-18">
+        <SectionDivider delay={0.3}/>
+        <FadeIn delay={0.6}>
+        <section id="about" className="w-full text-white scroll-mt-12 md:scroll-mt-18">
           <AboutPage />
         </section>
-        <section id="experience" className="w-full text-white bg-black/50 scroll-mt-12 md:scroll-mt-18">
+        </FadeIn>
+        
+        <SectionDivider delay={0.3}/>
+        <FadeIn delay={0.6}>
+        <section id="experience" className="w-full text-white scroll-mt-12 md:scroll-mt-18">
           <ExperiencePage />
         </section>
-        <section id="projects" className="w-full text-white bg-black/50 scroll-mt-12 md:scroll-mt-18">
+        </FadeIn>
+        
+        
+        <SectionDivider delay={0.3}/>
+        <FadeIn delay={0.6}>
+        <section id="projects" className="w-full text-white scroll-mt-12 md:scroll-mt-18">
           <ProjectsPage />
         </section>
+        </FadeIn>
+
+        <SectionDivider delay={0.3}/>
         <section id="contact" className="w-full text-white scroll-mt-12 md:scroll-mt-18">
           <ContactPage />
         </section>
       </div>
+
+      <Footer/>
+      
     </div>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 import { useContext, useEffect } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
-import FadeIn from "@/components/core/FadeIn";
 import { useRouter } from "next/navigation";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
@@ -146,7 +145,7 @@ function AboutPage() {
             <div className="space-y-8 lg:grid grid-cols-2 gap-6">
 
                 <div className="flex flex-col items-center text-center space-y-12">
-                    <FadeIn>
+                  
                         <div className="w-full bg-neutral-900 px-5 py-10 rounded-2xl space-y-4 border-none text-left">
                             <h1 className="text-[18px] font-bold sm:text-xl">
                                 {language === "en" ? about.en.title : about.id.title}
@@ -158,11 +157,11 @@ function AboutPage() {
                             ))}
 
                         </div>
-                    </FadeIn>
+                    
                 </div>
 
                 <div className="flex flex-col items-center">
-                    <FadeIn>
+                 
                         <div className="w-full bg-neutral-900 sm:grid grid-cols-2 gap-6 rounded-2xl">
 
                             <div className="text-left px-5 py-10">
@@ -193,12 +192,12 @@ function AboutPage() {
                                 </ul>
                             </div>
                         </div>
-                    </FadeIn>
+                   
 
                 </div>
             </div>
 
-            <FadeIn>
+     
                 <div className="max-w-3xl mx-auto bg-neutral-900 px-6 py-8 rounded-2xl text-white text-center space-y-3">
                     <p className="text-[18px] italic">
                         {language === "en"
@@ -207,10 +206,10 @@ function AboutPage() {
                     </p>
                     <p className="text-sm text-white/80">- Patrick McKenzie</p>
                 </div>
-            </FadeIn>
+   
 
 
-            <FadeIn>
+      
                 <div className="space-y-12">
                     <div className="flex flex-col justify-center items-center text-center max-w-96 mx-auto">
                         <h1 className="text-3xl font-bold">
@@ -243,7 +242,7 @@ function AboutPage() {
                         </div>
                     </div>
                 </div>
-            </FadeIn>
+          
         </div>
 
 

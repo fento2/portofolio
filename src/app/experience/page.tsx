@@ -2,7 +2,6 @@
 
 import { useContext, useEffect } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
-import FadeIn from "@/components/core/FadeIn";
 import {
   Card,
   CardContent,
@@ -57,8 +56,7 @@ function ExperiencePage() {
               className={`bg-neutral-900 border-none text-white
                 ${isHorizontal ? "lg:col-span-2" : ""}`}
             >
-              <FadeIn>
-                <CardContent
+             <CardContent
                   className={`p-4 ${
                     isHorizontal
                       ? "flex flex-col lg:flex-row gap-4 items-start"
@@ -83,7 +81,7 @@ function ExperiencePage() {
                     </p>
                   </div>
                 </CardContent>
-              </FadeIn>
+            
             </Card>
           );
         })}

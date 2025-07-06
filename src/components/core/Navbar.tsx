@@ -17,7 +17,6 @@ function Navbar() {
     const { language, setLanguage } = useContext(LanguageContext);
 
     const MenuNav = [
-        { href: "#home", label: "Home" },
         { href: "#about", label: "About" },
         { href: "#experience", label: "Experience" },
         { href: "#projects", label: "Projects" },
@@ -28,7 +27,7 @@ function Navbar() {
 
     return (
 
-        <div>
+        <div className="font-mono">
             <nav className="w-full text-white py-3 md:py-6 fixed top-0 z-50 bg-black/50 backdrop-blur-xs">
                 <div className="flex items-center justify-between px-6">
 

@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/card";
 import { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
-import FadeIn from "@/components/core/FadeIn";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -77,8 +76,8 @@ function ProjectsPage() {
               key={index}
               className={`bg-neutral-900 border-none text-white `}
             >
-              <AnimatePresence>
-              <FadeIn>
+             
+           
                 <CardContent className="p-4">
                   <Link href={project.link ?? "#"} target="_blank" rel="noopener noreferrer">
                     <div
@@ -119,8 +118,7 @@ function ProjectsPage() {
                     </CardDescription>
                   </div>
                 </CardContent>
-              </FadeIn>
-              </AnimatePresence>
+
             </Card>
        
           );
