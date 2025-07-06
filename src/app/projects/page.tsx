@@ -29,7 +29,7 @@ function ProjectsPage() {
   const projects = [
     {
       title: "Personal Website",
-      image: "/personal-web.png",
+      image: "/personal_web.png",
       link: "https://portofolio-rho-ten-84.vercel.app/",
       description: {
         id: "Ini adalah website portofolio pertama saya yang dibangun menggunakan React, Next.js, dan Tailwind CSS. Website ini dirancang untuk memperkenalkan latar belakang saya, menampilkan proyek-proyek yang telah saya kerjakan, serta menyediakan halaman kontak untuk kolaborasi. Proyek ini menjadi langkah awal saya dalam membangun kehadiran digital sebagai developer dan sekaligus menjadi sarana belajar dalam menerapkan desain responsif, navigasi yang baik, serta performa optimal.",
@@ -77,11 +77,13 @@ function ProjectsPage() {
               className={`bg-neutral-900 border-none text-white `}
             >
              
-           
                 <CardContent className="p-4">
                   <Link href={project.link ?? "#"} target="_blank" rel="noopener noreferrer">
                     <div
-                      className="relative aspect-[5/4] overflow-hidden rounded-2xl transition-transform duration-300 hover:scale-105 w-full"
+                      className="relative aspect-[5/3] 
+                      overflow-hidden rounded-2xl
+                       transition-transform duration-300 
+                       hover:scale-105 w-full"
                     >
                       <Image
                         src={project.image}
