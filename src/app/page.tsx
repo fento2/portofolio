@@ -94,7 +94,7 @@ export default function Home() {
                   transition-transform duration-500 hover:scale-105 hover:rotate-2"
                 >
                   <Image
-                    src="/avatar-personal.png"
+                    src="/avatar_personal.png"
                     alt="Cyberpunk Coder"
                     fill
                     className="object-cover"
