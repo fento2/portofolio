@@ -39,13 +39,14 @@ function ProjectsPage() {
       tech: ["Next.Js", "React", "Tailwind CSS"],
     },
     {
-      title: "Project 2",
-      image: "/under development.jpg",
+      title: "Company Website",
+      image: "/project2.png",
+      link: "https://company-web-vert-psi.vercel.app/",
       description: {
-        id: "Proyek ini masih dalam tahap pengembangan dan dirancang untuk memperluas cakupan kemampuan saya dalam pengembangan aplikasi web. Fokus utama proyek ini adalah pada peningkatan performa, integrasi API, serta penerapan praktik terbaik dalam pengelolaan data dan arsitektur komponen. Deskripsi lengkap dan fitur-fitur utama akan segera ditambahkan setelah pengembangan selesai.",
-        en: "This project is currently in development and is intended to broaden my skills in web application development. The main focus of this project includes performance optimization, API integration, and implementing best practices in data handling and component architecture. A full description and feature highlights will be added once development is complete.",
-
+        id: "Situs web perusahaan yang sedang dikembangkan ini bertujuan untuk meningkatkan keterampilan saya dalam pengembangan aplikasi web modern. Fokus proyek ini mencakup optimasi performa menggunakan Next.js, integrasi API eksternal, serta penerapan arsitektur komponen yang skalabel dan praktik terbaik dalam pengelolaan data. Deskripsi fitur lengkap akan ditambahkan setelah tahap pengembangan utama selesai.",
+        en: "This corporate website is currently under development and aims to enhance my skills in modern web application development. The project focuses on performance optimization using Next.js, external API integration, and the implementation of scalable component architecture along with best practices in data management. A full feature description will be added after the main development phase is completed.",
       },
+      tech: ["Next.Js", "React", "Tailwind CSS"],
     },
     {
       title: "project 3",
@@ -71,58 +72,58 @@ function ProjectsPage() {
         {projects.slice(0, show).map((project, index) => {
 
           return (
-            
+
             <Card
               key={index}
               className={`bg-neutral-900 border-none text-white `}
             >
-             
-                <CardContent className="p-4">
-                  <Link href={project.link ?? "#"} target="_blank" rel="noopener noreferrer">
-                    <div
-                      className="relative aspect-[5/3] 
+
+              <CardContent className="p-4">
+                <Link href={project.link ?? "#"} target="_blank" rel="noopener noreferrer">
+                  <div
+                    className="relative aspect-[5/3] 
                       overflow-hidden rounded-2xl
                        transition-transform duration-300 
                        hover:scale-105 w-full"
-                    >
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                        priority={index === 0}
-                      />
-                    </div>
-                  </Link>
-
-                  <div className="w-full px-2">
-                    <CardTitle className="text-xl font-semibold mb-2">
-                      {project.title}
-                    </CardTitle>
-                    <CardDescription className="leading-relaxed text-white text-[16px]">
-                      <p className="indent-8 text-justify">
-                        {language === "en" ? project.description.en : project.description.id}
-                      </p>
-
-                      {project.tech && (
-                        <div className="flex flex-wrap gap-2 mt-4">
-                          {project.tech.map((tech, i) => (
-                            <span
-                              key={i}
-                              className="px-3 py-1 text-sm bg-gray-900/50 text-cyan-500 rounded-full border border-cyan-500"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                    </CardDescription>
+                  >
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      priority={index === 0}
+                    />
                   </div>
-                </CardContent>
+                </Link>
+
+                <div className="w-full px-2">
+                  <CardTitle className="text-xl font-semibold mb-2">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="leading-relaxed text-white text-[16px]">
+                    <p className="indent-8 text-justify">
+                      {language === "en" ? project.description.en : project.description.id}
+                    </p>
+
+                    {project.tech && (
+                      <div className="flex flex-wrap gap-2 mt-4">
+                        {project.tech.map((tech, i) => (
+                          <span
+                            key={i}
+                            className="px-3 py-1 text-sm bg-gray-900/50 text-cyan-500 rounded-full border border-cyan-500"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </CardDescription>
+                </div>
+              </CardContent>
 
             </Card>
-       
+
           );
         })}
 
@@ -132,9 +133,9 @@ function ProjectsPage() {
         <Button className="mt-4 rounded-2xl w-25 hover:bg-cyan-500 cursor-pointer
         bg-transparent border border-cyan-500
         text-xs"
-          onClick={() => setShow( show === 2 ? projects.length : 2)}>
-        {show === 2 ? "See More" : "See Less"}</Button>
-    </div>        
+          onClick={() => setShow(show === 2 ? projects.length : 2)}>
+          {show === 2 ? "See More" : "See Less"}</Button>
+      </div>
     </section >
   );
 }
