@@ -43,8 +43,8 @@ function ProjectsPage() {
       image: "/project2.png",
       link: "https://company-web-vert-psi.vercel.app/",
       description: {
-        id: "Situs web perusahaan yang sedang dikembangkan ini bertujuan untuk meningkatkan keterampilan saya dalam pengembangan aplikasi web modern. Fokus proyek ini mencakup optimasi performa menggunakan Next.js, integrasi API eksternal, serta penerapan arsitektur komponen yang skalabel dan praktik terbaik dalam pengelolaan data. Deskripsi fitur lengkap akan ditambahkan setelah tahap pengembangan utama selesai.",
-        en: "This corporate website is currently under development and aims to enhance my skills in modern web application development. The project focuses on performance optimization using Next.js, external API integration, and the implementation of scalable component architecture along with best practices in data management. A full feature description will be added after the main development phase is completed.",
+        id: "Website ini merupakan proyek redesign untuk sebuah situs hotel sebagai bagian dari tugas pengembangan ulang tampilan dan struktur web. Proyek ini difokuskan pada peningkatan UI/UX, kecepatan akses, serta implementasi teknologi modern seperti Next.js dan Tailwind CSS. Fitur seperti navigasi dinamis, tata letak responsif, dan integrasi API dirancang untuk memberikan pengalaman pengguna yang optimal. Deskripsi lengkap fitur akan ditambahkan setelah pengembangan selesai.",
+        en: "This website is a redesign project for a hotel site, created as part of an assignment focused on improving the layout, design, and structure of an existing web interface. The project emphasizes enhanced UI/UX, fast performance, and the use of modern technologies such as Next.js and Tailwind CSS. Features like dynamic navigation, responsive layouts, and API integration are designed to deliver an optimal user experience. A full feature description will be added upon development completion.",
       },
       tech: ["Next.Js", "React", "Tailwind CSS"],
     },
