@@ -134,7 +134,13 @@ function ProjectsPage() {
         bg-transparent border border-cyan-500
         text-xs"
           onClick={() => setShow(show === 2 ? projects.length : 2)}>
-          {show === 2 ? "See More" : "See Less"}</Button>
+          {show === 2 ? "See More" : "See Less"}
+        </Button>
+        <div className="text-center mt-6 text-sm text-stone-500 italic">
+          {language === "en"
+            ? "If you find any bugs or issues in my project, feel free to contact me via the contact page."
+            : "Jika kamu menemukan bug atau masalah dalam proyek saya, silakan hubungi saya melalui halaman kontak."}
+        </div>
       </div>
     </section >
   );
