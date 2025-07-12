@@ -13,9 +13,9 @@ export default function Timeline({ items }: Data) {
   return (
     <div className="relative border-l-2 border-cyan-500 pl-6">
       {items.map((item, index) => (
-        <div key={index} className="relative mb-10 ml-4">
+        <div key={index} className="relative mb-10 ml-4 bg-neutral-900 p-6 rounded-2xl">
 
-          {/* Titik di timeline */}
+      
           <div className="absolute -left-6 top-2 w-4 h-4 bg-cyan-500 rounded-full" />
           
           

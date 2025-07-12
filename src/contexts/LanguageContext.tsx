@@ -22,7 +22,7 @@ function LanguageProvider(props: ILanguageProvider) {
 
   //ambil di local storage
   useEffect(() => {
-    const savedLang = localStorage.getItem("language");
+    const savedLang = sessionStorage.getItem("language");
     if (savedLang) {
       setLanguage(savedLang);
     }
@@ -30,7 +30,7 @@ function LanguageProvider(props: ILanguageProvider) {
 
   const setLanguage = (lang: string) => {
     setLanguageState(lang);
-    localStorage.setItem("language", lang);
+    sessionStorage.setItem("language", lang);
   }
 
   return (

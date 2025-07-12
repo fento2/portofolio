@@ -2,10 +2,10 @@
 import AboutPage from "./about/page";
 import ProjectsPage from "./projects/page";
 import ContactPage from "./contact/page";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
 import CyberBackground from "@/components/core/CyberBackground";
-import { BsInstagram } from "react-icons/bs";
+import { BsInstagram, BsSpotify } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link"
 import FadeIn, { FadeInLeft, SectionDivider } from "@/components/core/FadeIn";
@@ -15,9 +15,10 @@ import { Button } from "@/components/ui/button";
 import ExperiencePage from "./experience/page";
 import Footer from "@/components/core/Footer";
 import Image from "next/image";
-
+import Spotify from "@/components/core/Spotify";
 export default function Home() {
   const { language } = useContext(LanguageContext);
+  const [showMusic, setShowMusic] = useState(false);
 
   return (
     <div className="bg-[#090527] min-h-screen relative overflow-x-hidden scroll-smooth font-mono ">
@@ -105,6 +106,25 @@ export default function Home() {
 
             </FadeIn>
 
+       
+              {/* Konten Spotify */}
+              <div className="fixed bottom-4 right-4 z-50 ">
+                <div className={`${showMusic ? "block" : "hidden"}
+                transition-all duration-300 ease-in-out`}
+                  onMouseLeave={()=> setShowMusic(false)}>
+                  <Spotify />
+                </div>
+              </div>
+       
+            {/* Tombol buka */}
+            {!showMusic && (
+              <div className="fixed bottom-4 right-4">
+                <BsSpotify
+                  className="w-8 h-8 hover:text-cyan-500 cursor-pointer z-50"
+                  onClick={() => setShowMusic(true)}
+                />
+              </div>
+            )}
 
           </div>
         </section>
