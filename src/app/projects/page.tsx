@@ -50,7 +50,7 @@ function ProjectsPage() {
     },
     {
       title: "Job Board",
-      image: "./Finpro.png",
+      image: "/job_board.png",
       link: "https://final-project-fe-mauve.vercel.app/",
       description: {
         id: "Aplikasi Job Board adalah platform yang dirancang untuk menghubungkan pencari kerja dengan peluang kerja yang diposting oleh perusahaan. Tujuannya adalah untuk menyederhanakan proses pencarian kerja bagi para pencari kerja maupun perusahaan, serta mempermudah interaksi dan pertukaran informasi tentang posisi yang tersedia.",
