@@ -49,11 +49,12 @@ function ProjectsPage() {
       tech: ["Next.Js", "React", "Tailwind CSS"],
     },
     {
-      title: "project 3",
-      image: "/under development.jpg",
+      title: "Job Board",
+      image: "./Finpro.png",
+      link: "https://final-project-fe-mauve.vercel.app/",
       description: {
-        id: "Proyek ini masih dalam tahap pengembangan dan dirancang untuk memperluas cakupan kemampuan saya dalam pengembangan aplikasi web. Fokus utama proyek ini adalah pada peningkatan performa, integrasi API, serta penerapan praktik terbaik dalam pengelolaan data dan arsitektur komponen. Deskripsi lengkap dan fitur-fitur utama akan segera ditambahkan setelah pengembangan selesai.",
-        en: "This project is currently in development and is intended to broaden my skills in web application development. The main focus of this project includes performance optimization, API integration, and implementing best practices in data handling and component architecture. A full description and feature highlights will be added once development is complete.",
+        id: "Aplikasi Job Board adalah platform yang dirancang untuk menghubungkan pencari kerja dengan peluang kerja yang diposting oleh perusahaan. Tujuannya adalah untuk menyederhanakan proses pencarian kerja bagi para pencari kerja maupun perusahaan, serta mempermudah interaksi dan pertukaran informasi tentang posisi yang tersedia.",
+        en: "Job Board apps are platforms designed to connect job seekers with job opportunities posted by companies. The goal is to speed up the job search process for both job seekers and companies, as well as facilitate interaction and the exchange of information about available positions",
       }
     },
   ];
