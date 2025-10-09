@@ -3,6 +3,7 @@ import { useContext, useEffect } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
 import { useRouter } from "next/navigation";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { color } from "framer-motion";
 
 function AboutPage() {
 
@@ -121,12 +122,16 @@ function AboutPage() {
         { name: "Next.js", icon: "logos:nextjs-icon", color: "#ffffff" },
         { name: "Node.js", icon: "logos:nodejs-icon", color: "#339933" },
         { name: "GitHub", icon: "skill-icons:github-dark", color: "#ffffff" },
+        { name: 'Express.Js', icon: 'skill-icons:expressjs-light', color: "#f4f2ed" },
+        { name: 'Prisma ORM', icon: 'skill-icons:prisma', color: "#677eeb" },
+        { name: 'Postgre SQL', icon: 'skill-icons:postgresql-dark', color: '#336791' }
+
     ];
 
     useEffect(() => {
         router.replace("/");
 
-    }, []);
+    }, [router]);
 
 
     return (
@@ -145,104 +150,104 @@ function AboutPage() {
             <div className="space-y-8 lg:grid grid-cols-2 gap-6">
 
                 <div className="flex flex-col items-center text-center space-y-12">
-                  
-                        <div className="w-full bg-neutral-900 px-5 py-10 rounded-2xl space-y-4 border-none text-left">
-                            <h1 className="text-[18px] font-bold sm:text-xl">
-                                {language === "en" ? about.en.title : about.id.title}
-                            </h1>
-                            {(language === "en" ? about.en.desc : about.id.desc).map((value, index) => (
-                                <p key={index} className="md:text-[16px] indent-8 text-justify">
-                                    {value}
-                                </p>
-                            ))}
 
-                        </div>
-                    
+                    <div className="w-full bg-neutral-900 px-5 py-10 rounded-2xl space-y-4 border-none text-left">
+                        <h1 className="text-[18px] font-bold sm:text-xl">
+                            {language === "en" ? about.en.title : about.id.title}
+                        </h1>
+                        {(language === "en" ? about.en.desc : about.id.desc).map((value, index) => (
+                            <p key={index} className="md:text-[16px] indent-8 text-justify">
+                                {value}
+                            </p>
+                        ))}
+
+                    </div>
+
                 </div>
 
                 <div className="flex flex-col items-center">
-                 
-                        <div className="w-full bg-neutral-900 sm:grid grid-cols-2 gap-6 rounded-2xl">
 
-                            <div className="text-left px-5 py-10">
-                                <h1 className="text-[18px] font-bold sm:text-xl mb-3">
-                                    {language === "en" ? fundamental.en.title : fundamental.id.title}
-                                </h1>
-                                <p className="md:text-[16px] tracking-wide mb-2">
-                                    {language === "en" ? fundamental.en.subtitle : fundamental.id.subtitle}
-                                </p>
-                                <ul className="list-disc pl-5 space-y-1 text-[16px]">
-                                    {(language === "en" ? fundamental.en.isi : fundamental.id.isi).map((value, index) => (
-                                        <li key={index}>{value}</li>
-                                    ))}
-                                </ul>
-                            </div>
+                    <div className="w-full bg-neutral-900 sm:grid grid-cols-2 gap-6 rounded-2xl">
 
-                            <div className="text-left px-5 py-10">
-                                <h1 className="text-[18px] font-bold sm:text-xl mb-3">
-                                    {language === "en" ? skills.en.title : skills.id.title}
-                                </h1>
-                                <p className="md:text-[16px] tracking-wide mb-2">
-                                    {language === "en" ? skills.en.subtitle : skills.id.subtitle}
-                                </p>
-                                <ul className="list-disc pl-5 space-y-1 text-[16px]">
-                                    {(language === "en" ? skills.en.isi : skills.id.isi).map((value, index) => (
-                                        <li key={index}>{value}</li>
-                                    ))}
-                                </ul>
-                            </div>
+                        <div className="text-left px-5 py-10">
+                            <h1 className="text-[18px] font-bold sm:text-xl mb-3">
+                                {language === "en" ? fundamental.en.title : fundamental.id.title}
+                            </h1>
+                            <p className="md:text-[16px] tracking-wide mb-2">
+                                {language === "en" ? fundamental.en.subtitle : fundamental.id.subtitle}
+                            </p>
+                            <ul className="list-disc pl-5 space-y-1 text-[16px]">
+                                {(language === "en" ? fundamental.en.isi : fundamental.id.isi).map((value, index) => (
+                                    <li key={index}>{value}</li>
+                                ))}
+                            </ul>
                         </div>
-                   
+
+                        <div className="text-left px-5 py-10">
+                            <h1 className="text-[18px] font-bold sm:text-xl mb-3">
+                                {language === "en" ? skills.en.title : skills.id.title}
+                            </h1>
+                            <p className="md:text-[16px] tracking-wide mb-2">
+                                {language === "en" ? skills.en.subtitle : skills.id.subtitle}
+                            </p>
+                            <ul className="list-disc pl-5 space-y-1 text-[16px]">
+                                {(language === "en" ? skills.en.isi : skills.id.isi).map((value, index) => (
+                                    <li key={index}>{value}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
 
-     
-                <div className="max-w-3xl mx-auto bg-neutral-900 px-6 py-8 rounded-2xl text-white text-center space-y-3">
-                    <p className="text-[18px] italic">
-                        {language === "en"
-                            ? `"Every great developer you know got there by solving problems they were unqualified to solve - until they actually did it."`
-                            : `"Setiap developer hebat yang kamu kenal dulunya pernah mengerjakan hal yang belum tentu bisa - sampai akhirnya mereka bisa."`}
-                    </p>
-                    <p className="text-sm text-white/80">- Patrick McKenzie</p>
+
+            <div className="max-w-3xl mx-auto bg-neutral-900 px-6 py-8 rounded-2xl text-white text-center space-y-3">
+                <p className="text-[18px] italic">
+                    {language === "en"
+                        ? `"Every great developer you know got there by solving problems they were unqualified to solve - until they actually did it."`
+                        : `"Setiap developer hebat yang kamu kenal dulunya pernah mengerjakan hal yang belum tentu bisa - sampai akhirnya mereka bisa."`}
+                </p>
+                <p className="text-sm text-white/80">- Patrick McKenzie</p>
+            </div>
+
+
+
+
+            <div className="space-y-12">
+                <div className="flex flex-col justify-center items-center text-center max-w-96 mx-auto">
+                    <h1 className="text-3xl font-bold">
+                        {language === "en" ? tech.en.title : tech.id.title}
+                    </h1>
+                    <h1 className="text-[18px] mt-[10px]">
+                        {language === "en" ? tech.en.subtitle : tech.id.subtitle}
+                    </h1>
                 </div>
-   
 
-
-      
-                <div className="space-y-12">
-                    <div className="flex flex-col justify-center items-center text-center max-w-96 mx-auto">
-                        <h1 className="text-3xl font-bold">
-                            {language === "en" ? tech.en.title : tech.id.title}
-                        </h1>
-                        <h1 className="text-[18px] mt-[10px]">
-                            {language === "en" ? tech.en.subtitle : tech.id.subtitle}
-                        </h1>
-                    </div>
-
-                    <div className="grid grid-rows-1 mx-7">
-                        <div className="flex justify-center items-center">
-                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-12 place-items-center mt-10">
-                                {techStack.map((tech,index) => (
-                                    <div
-                                        key={index}
-                                        className="flex flex-col items-center transition-transform 
+                <div className="grid grid-rows-1 mx-7">
+                    <div className="flex justify-center items-center">
+                        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-12 place-items-center mt-10">
+                            {techStack.map((tech, index) => (
+                                <div
+                                    key={index}
+                                    className="flex flex-col items-center transition-transform 
                                         duration-300 hover:scale-110 group"
-                                    >
-                                        <Icon
-                                            icon={tech.icon}
-                                            width={100}
-                                            height={100}
-                                            className="mb-2 group-hover:drop-shadow-[0_0_6px]"
-                                            style={{ color: tech.color }}
-                                        />   
-                                    </div>
-                                ))}
-                            </div>
+                                >
+                                    <Icon
+                                        icon={tech.icon}
+                                        width={100}
+                                        height={100}
+                                        className="mb-2 group-hover:drop-shadow-[0_0_6px]"
+                                        style={{ color: tech.color }}
+                                    />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
-          
+            </div>
+
         </div>
 
 
