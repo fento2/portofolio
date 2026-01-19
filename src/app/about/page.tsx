@@ -3,7 +3,6 @@ import { useContext, useEffect } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
 import { useRouter } from "next/navigation";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { color } from "framer-motion";
 
 function AboutPage() {
 
