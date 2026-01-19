@@ -117,16 +117,18 @@ function AboutPage() {
         { name: "CSS", icon: "logos:css-3", color: "#264de4" },
         { name: "JavaScript", icon: "logos:javascript", color: "#f7df1e" },
         { name: "TypeScript", icon: "logos:typescript-icon", color: "#3178c6" },
+        { name: "Go Language", icon: "logos:go", color: "#00ADD8" },
         { name: "React", icon: "logos:react", color: "#61dafb" },
         { name: "Tailwind", icon: "logos:tailwindcss-icon", color: "#38bdf8" },
         { name: "Next.js", icon: "logos:nextjs-icon", color: "#ffffff" },
         { name: "Node.js", icon: "logos:nodejs-icon", color: "#339933" },
         { name: "GitHub", icon: "skill-icons:github-dark", color: "#ffffff" },
-        { name: 'Express.Js', icon: 'skill-icons:expressjs-light', color: "#f4f2ed" },
-        { name: 'Prisma ORM', icon: 'skill-icons:prisma', color: "#677eeb" },
-        { name: 'Postgre SQL', icon: 'skill-icons:postgresql-dark', color: '#336791' }
-
+        { name: "Express.Js", icon: "skill-icons:expressjs-light", color: "#f4f2ed" },
+        { name: "Prisma ORM", icon: "skill-icons:prisma", color: "#677eeb" },
+        { name: "Postgre SQL", icon: "skill-icons:postgresql-dark", color: "#336791" },
+        { name: "Nest Js", icon: "logos:nestjs", color: "#E0234E" }
     ];
+
 
     useEffect(() => {
         router.replace("/");
