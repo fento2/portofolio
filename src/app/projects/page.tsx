@@ -28,15 +28,24 @@ function ProjectsPage() {
 
   const projects = [
     {
-      title: "Personal Website",
-      image: "/personal_web.png",
-      link: "https://portofolio-rho-ten-84.vercel.app/",
+      title: "Indonesia Region Api",
+      image: "/indonesia_region_api.png",
+      link: "https://indonesia-region-api.vercel.app/",
       description: {
-        id: "Ini adalah website portofolio pertama saya yang dibangun menggunakan React, Next.js, dan Tailwind CSS. Website ini dirancang untuk memperkenalkan latar belakang saya, menampilkan proyek-proyek yang telah saya kerjakan, serta menyediakan halaman kontak untuk kolaborasi. Proyek ini menjadi langkah awal saya dalam membangun kehadiran digital sebagai developer dan sekaligus menjadi sarana belajar dalam menerapkan desain responsif, navigasi yang baik, serta performa optimal.",
-        en: "This is my first portfolio website, built using React, Next.js, and Tailwind CSS. It is designed to showcase my background, highlight the projects I've worked on, and provide a contact page for potential collaboration. This project marks my initial step in building a digital presence as a developer and also serves as a learning opportunity to implement responsive design, good navigation, and optimized performance.",
-
+        id: "Indonesia Region API adalah RESTful API publik yang menyediakan data wilayah administratif Indonesia secara terstruktur dan hierarkis, mulai dari provinsi, kabupaten/kota, kecamatan, hingga desa. API ini mendukung fitur pagination, filtering, dan sorting untuk memastikan performa yang cepat, konsisten, dan mudah diintegrasikan ke berbagai aplikasi web maupun mobile.",
+        en: "Indonesia Region API is a public RESTful API that provides structured and hierarchical Indonesian administrative region data, including provinces, regencies/cities, districts, and villages. It supports pagination, filtering, and sorting features to deliver fast, consistent, and easily integrable data for web and mobile applications."
       },
-      tech: ["Next.Js", "React", "Tailwind CSS"],
+      tech: ["Node Js", "Express Js", "Prisma ORM", "Postgre SQL"],
+    },
+    {
+      title: "Job Board",
+      image: "/job_board.png",
+      link: "https://final-project-fe-mauve.vercel.app/",
+      description: {
+        id: "Aplikasi Job Board adalah platform yang dirancang untuk menghubungkan pencari kerja dengan peluang kerja yang diposting oleh perusahaan. Tujuannya adalah untuk menyederhanakan proses pencarian kerja bagi para pencari kerja maupun perusahaan, serta mempermudah interaksi dan pertukaran informasi tentang posisi yang tersedia.",
+        en: "Job Board apps are platforms designed to connect job seekers with job opportunities posted by companies. The goal is to speed up the job search process for both job seekers and companies, as well as facilitate interaction and the exchange of information about available positions",
+      },
+      tech: ["Next.Js", "React", "Tailwind CSS", "Node.Js", "Express.Js", 'Prisma ORM', 'Postgre SQL'],
     },
     {
       title: "Company Website",
@@ -49,14 +58,15 @@ function ProjectsPage() {
       tech: ["Next.Js", "React", "Tailwind CSS"],
     },
     {
-      title: "Job Board",
-      image: "/job_board.png",
-      link: "https://final-project-fe-mauve.vercel.app/",
+      title: "Personal Website",
+      image: "/personal_web.png",
+      link: "https://portofolio-rho-ten-84.vercel.app/",
       description: {
-        id: "Aplikasi Job Board adalah platform yang dirancang untuk menghubungkan pencari kerja dengan peluang kerja yang diposting oleh perusahaan. Tujuannya adalah untuk menyederhanakan proses pencarian kerja bagi para pencari kerja maupun perusahaan, serta mempermudah interaksi dan pertukaran informasi tentang posisi yang tersedia.",
-        en: "Job Board apps are platforms designed to connect job seekers with job opportunities posted by companies. The goal is to speed up the job search process for both job seekers and companies, as well as facilitate interaction and the exchange of information about available positions",
+        id: "Ini adalah website portofolio pertama saya yang dibangun menggunakan React, Next.js, dan Tailwind CSS. Website ini dirancang untuk memperkenalkan latar belakang saya, menampilkan proyek-proyek yang telah saya kerjakan, serta menyediakan halaman kontak untuk kolaborasi. Proyek ini menjadi langkah awal saya dalam membangun kehadiran digital sebagai developer dan sekaligus menjadi sarana belajar dalam menerapkan desain responsif, navigasi yang baik, serta performa optimal.",
+        en: "This is my first portfolio website, built using React, Next.js, and Tailwind CSS. It is designed to showcase my background, highlight the projects I've worked on, and provide a contact page for potential collaboration. This project marks my initial step in building a digital presence as a developer and also serves as a learning opportunity to implement responsive design, good navigation, and optimized performance.",
+
       },
-      tech: ["Next.Js", "React", "Tailwind CSS", "Node.Js", "Express.Js", 'Prisma ORM', 'Postgre SQL'],
+      tech: ["Next.Js", "React", "Tailwind CSS"],
     },
   ];
 
