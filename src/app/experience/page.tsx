@@ -20,7 +20,7 @@ function ExperiencePage() {
     {
       title: "Fullstack Bootcamp",
       company: "Purwadhika",
-      duration: "Mey 2024 - now",
+      duration: "Mey 2025 - oct 2025",
       description: {
         id: "Belajar stack MERN, REST API, testing, dan deployment modern. Fokus pada arsitektur skala production serta kolaborasi tim menggunakan Git dan metodologi agile.",
         en: "Learning MERN stack, REST API, testing, and modern deployment. Focused on production-scale architecture and team collaboration using Git and agile methodology.",
