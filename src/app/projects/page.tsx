@@ -38,16 +38,6 @@ function ProjectsPage() {
       tech: ["Node Js", "Express Js", "Prisma ORM", "Postgre SQL"],
     },
     {
-      title: "Job Board",
-      image: "/job_board.png",
-      link: "https://final-project-fe-mauve.vercel.app/",
-      description: {
-        id: "Aplikasi Job Board adalah platform yang dirancang untuk menghubungkan pencari kerja dengan peluang kerja yang diposting oleh perusahaan. Tujuannya adalah untuk menyederhanakan proses pencarian kerja bagi para pencari kerja maupun perusahaan, serta mempermudah interaksi dan pertukaran informasi tentang posisi yang tersedia.",
-        en: "Job Board apps are platforms designed to connect job seekers with job opportunities posted by companies. The goal is to speed up the job search process for both job seekers and companies, as well as facilitate interaction and the exchange of information about available positions",
-      },
-      tech: ["Next.Js", "React", "Tailwind CSS", "Node.Js", "Express.Js", 'Prisma ORM', 'Postgre SQL'],
-    },
-    {
       title: "Company Website",
       image: "/project2.png",
       link: "https://company-web-vert-psi.vercel.app/",
@@ -57,6 +47,17 @@ function ProjectsPage() {
       },
       tech: ["Next.Js", "React", "Tailwind CSS"],
     },
+    {
+      title: "Job Board",
+      image: "/job_board.png",
+      link: "https://final-project-fe-mauve.vercel.app/",
+      description: {
+        id: "Aplikasi Job Board adalah platform yang dirancang untuk menghubungkan pencari kerja dengan peluang kerja yang diposting oleh perusahaan. Tujuannya adalah untuk menyederhanakan proses pencarian kerja bagi para pencari kerja maupun perusahaan, serta mempermudah interaksi dan pertukaran informasi tentang posisi yang tersedia.",
+        en: "Job Board apps are platforms designed to connect job seekers with job opportunities posted by companies. The goal is to speed up the job search process for both job seekers and companies, as well as facilitate interaction and the exchange of information about available positions",
+      },
+      tech: ["Next.Js", "React", "Tailwind CSS", "Node.Js", "Express.Js", 'Prisma ORM', 'Postgre SQL'],
+    },
+
     {
       title: "Personal Website",
       image: "/personal_web.png",
